@@ -1,0 +1,16 @@
+title: Fun
+description: Here to have fun
+template:
+  repo: fun-template
+  name: fun
+before:
+  - type: createIssue
+    title: Welcome!
+    body: new-issue.md
+steps:
+  - title: First step
+    description: The first step in your course
+    event: issues.assigned
+    link: '{{ repoUrl }}'
+    actions:
+      - type: closeIssue
